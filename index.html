@@ -343,6 +343,22 @@
   footer a{ color:var(--periwinkle); font-weight:600; text-decoration:none; }
   footer a:hover{ text-decoration:underline; }
 
+  /* "want your own link?" promo — same glass language as the chips/share row */
+  .promo{
+    display:flex; align-items:center; justify-content:center; gap:9px;
+    margin-top:2px; padding:13px 18px; border-radius:999px;
+    font-family:"Space Grotesk", sans-serif; font-weight:600; font-size:.86rem;
+    color:var(--periwinkle); text-decoration:none;
+    background:var(--glass); border:1px solid var(--glass-line);
+    box-shadow:0 8px 22px rgba(74,60,130,.08);
+    backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+    transition:transform .3s var(--ease), background .3s var(--ease);
+  }
+  .promo:hover{ transform:translateY(-2px); background:rgba(255,255,255,.72); }
+  .promo:active{ transform:scale(.98); }
+  .promo-arrow{ transition:transform .3s var(--ease); }
+  .promo:hover .promo-arrow{ transform:translateX(4px); }
+
   /* focus states for keyboard users */
   a:focus-visible, .share-btn:focus-visible{
     outline:3px solid var(--periwinkle); outline-offset:3px; border-radius:14px;
@@ -446,6 +462,11 @@
     <footer class="rise">
       <p>Made with <span class="heart">♥</span> and whole foods · <a href="https://www.themeridianagency.xyz" target="_blank" rel="noopener">Meridian</a></p>
     </footer>
+
+    <a class="promo rise" href="https://www.themeridianagency.xyz/services/link-in-bio-setup" target="_blank" rel="noopener">
+      <span class="promo-text">✨ Want your own link?</span>
+      <span class="promo-arrow">→</span>
+    </a>
   </main>
 
 <script>
